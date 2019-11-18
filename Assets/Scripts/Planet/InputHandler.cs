@@ -32,7 +32,7 @@ namespace BallOnPlanet
         {
             result = Vector2.zero;
 
-#if UNITY_ANDROID || UNITY_IPHONE
+#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_IPHONE)
             if (Input.touchCount == 0)
                 return false;
 
